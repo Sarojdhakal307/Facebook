@@ -376,15 +376,23 @@ i{
     font-size: 11px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#new-acc_signupButton{
+#new-acc_signupButton {
     width: 40%;
+    padding: 10px;
     /* padding: ; */
     background-color: rgb(50, 137, 50);
     border-color:#47475575;
     border-radius: 6px;
     font-size: 18px;
+    margin: 20px;
     align-items: center;
     margin-left: 30%;
     font-weight: 700;
+    cursor: pointer;
     color: white;
+}
+#new-acc_signupButton:hover{
+    box-shadow: 8px 8px 8px #888888;
+    background-color: rgba(54, 142, 54, 0.858);
+    transition: 0.7s;
 }

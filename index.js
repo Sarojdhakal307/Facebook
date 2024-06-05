@@ -6,7 +6,7 @@ const path = require('path');
 
 const {connectMongoDB} = require('./server');
 
-connectMongoDB("mongodb://localhost:27017/facebook").then(() => {
+connectMongoDB("mongodb://127.0.0.1:27017/facebook").then(() => {
 console.log("MongoDB connected");    
 });
 

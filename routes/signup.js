@@ -9,11 +9,23 @@ signuprouter.get('/', (req, res) => {
 );
 signuprouter.post('/', async (req, res) => {
     try {
+        console.log(req.body);
         const { firstName, lastName, email, password, DOB,gender } = req.body;
-        const newUser = new UserDB({ firstName, lastName, email, username, password, DOB, gender });
-        await newUser.save();
-        res.send('Data saved');
-    } catch (error) {
+        console.log(firstName, lastName, email, password);
+        const newUser = new UserDB({ 
+            firstName : body.firstName, 
+            lastName : body.lastName, 
+            email : body.email,
+            username : body.username, 
+            password : body.password,
+            DOB :  body.DOB, 
+            gender: body.gender,
+         });
+         newUser.save().then((req,res)=>{
+                console.log('Data saved');
+         });
+        }
+     catch (error) {
         res.send('Error saving data');
     }
 }
