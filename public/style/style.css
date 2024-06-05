@@ -1,0 +1,390 @@
+body{
+    background-color: rgb(231, 232, 234);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.indexBody{
+    background-color: rgb(231, 232, 234);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    
+    
+
+}
+.index_page{
+    margin: 0 auto;
+    padding: 1cm; 
+    align-items: center;
+    border-color: #050e1b;
+    border-width: 100px;
+    
+        
+}
+.intro a{
+    font-size: 80px;
+    font-weight: 700;
+    color: rgb(23, 78, 231);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+.intro{
+    text-align: center;
+    width: 400px;
+
+}
+.intro p{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(49, 45, 45);
+
+}
+.block{
+    height: 320px;
+    width: 400px;
+    background: white;
+    align-self: center;
+    border-radius: 15px;
+    box-shadow: 10px;
+    
+}
+.input{
+    font-size: 20px;
+    box-shadow: 10px;
+    
+}
+.email-input ,.password-input{
+    border-radius: 5px;
+    border-width:0.5px;
+    border-color: rgb(198, 194, 194);
+    /* border-color: rgb(165, 160, 160); */
+    /* border-width: 0.1px; */
+    height: auto;
+    width: 80%;
+    font-size: 16px;
+    text-align: left;
+    padding: 12px;
+    margin: 10px;
+    position:relative;
+    left: 15px;
+    top: 15px;
+    
+}
+.email-input:hover ,.password-input:hover{
+    box-shadow: 3px;
+    /* font-size: 18px; */
+    border-color: rgba(30, 30, 226, 0.345);
+}
+.login{
+    width: 90%;
+    height: auto;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    background-color: #1877f2;
+    border-radius: 6px;
+    border: none;
+    margin: 10px;
+    position: relative;
+    top: 10px;
+}
+.login:hover{
+    box-shadow: 5px;
+    background-color: rgb(94, 94, 218);
+
+}
+#forgot-password{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    margin-left: 25%;
+    /* width: 10px; */
+    
+}
+#forgot-password{
+    border: 0px;
+    background-color: white;
+    /* display: flex;
+    justify-content: center;
+    text-align: center; */
+    /* padding: 1px; */
+     margin-top: 3px; 
+    font-size: 19px;
+    color: #1e74e6;
+    cursor: pointer;
+    /* width: 200px; */
+    /* margin-left: 20%; */
+    height: 40px;
+}
+#forgot-password p:hover{
+    /* font-size: 20px; */
+    color: #114b96;
+}
+/* 
+#signup_Xbutton{
+
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid black;
+} */
+#signup_Xbutton a{
+    text-decoration: none;
+    position: relative;
+    background-color: rgba(46, 38, 38, 0.119);
+    left: 93%;
+    top: 3px;
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.438);
+    cursor: pointer;
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    text-align: center;
+    border: 1px solid black;
+}
+.account-create{
+    background-color: rgba(110, 178, 9, 0.842);
+    color: white;
+    height: 1cm;
+    width: 5cm;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 17.5px;
+    position: relative;
+    top: 4px;
+    bottom: 5px;
+    left: 100px;
+}  
+.account-create :hover{
+        box-shadow: 5px;
+        /* background-color: rgba(148, 231, 23, 0.564); */
+        font-size: 18px;
+    }
+.account-create a{
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+.lastinfo{
+    position: relative;
+    top: 20px;
+    left: 15px;
+}
+.lastinfo .bold{
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+
+}
+.lastinfo .bold :hover{
+    text-shadow: 4px;
+    color: rgba(0, 0, 0, 0.597);
+    font-size: 16px;
+}
+.lastinfo p p1{
+    font-weight: 400;
+    float: left;
+}
+
+/* style css for forgot password page */
+
+.forgot-block{
+    background-color: white;
+    height: 250px;
+    margin-top: 39px;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    padding: 18px;
+    padding-top: 1px;
+    max-width: 500px;
+}
+.forgot-intro{
+    font-weight: 700;
+    position: relative;
+    top: -9px;
+    left: 10px;
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+
+}
+.forgot-hzrLine{
+    color: rgba(235, 230, 230, 0.03);
+    border-color:  rgba(161, 158, 158, 0.144);
+    position: relative;
+    top: -12px;
+
+}
+.forgot-inputinfo{
+    font-size: 17.5px;
+    position: relative;
+    top: -11px;
+    color: rgb(76, 71, 71);
+}
+.forgot-email_input{
+    padding: 10px;
+    height: auto;
+    width: 400px;
+    border-radius: 5px;
+    font-size: 17px;
+    border-color: rgba(83, 80, 80, 0.112);
+    margin-bottom: 18px;
+
+}
+.forgot-button_search{
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 6px;
+    width: 100px;
+    background-color: #529af7;;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(99, 97, 97);
+    /* position: ; */
+    float: right;
+    /* right:0px ; */
+
+}
+.forgot-button_cancel{
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    margin: 6px;
+    width: 100px;
+    background-color: rgba(169, 169, 169, 0.356);
+    font-weight: 700;
+    font-size: 15px;
+    color: rgb(99, 97, 97);
+    /* position: absolute; */
+    float: right;
+}
+
+/* 
+css for create new account 
+ */
+ 
+ .new-acc_body{
+    background-color: rgba(111, 111, 111, 0.422);
+    align-items: center;
+
+ }
+ .new-acc_layout{
+    color: #114b9661;
+    text-align: center;
+    font-size: 45px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 700;
+
+ }
+.new-acc_block{
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 500px;
+}
+i{
+    /* position: relat./ive; */
+    left: 80px;
+}
+.bi-x-lg{
+    position: relative;
+    left: 94%;
+    top: 80px;
+}
+.new-acc_header{
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 25px;
+   
+}
+ .new-acc_bold{
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 700;
+    font-size: 33px;
+    margin: 0px;
+   text-align: left;
+   /* margin-left: 15px; */
+
+ }
+ .new-acc_hrzline{
+   margin: 20px;
+
+ }
+.new-acc_firstName , .new-acc_lastName{
+    margin: 6px;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgba(59, 66, 73, 0.137);
+    border-width: 0.01px;
+    border-color: antiquewhite;
+    padding: 6px;
+    max-width: 42%;
+ }
+.new-acc_gmailInput ,.new-acc_passwordInput{
+    width: 90%;
+    font-size: 17px;
+    border-radius: 5px;
+    background-color: rgba(59, 66, 73, 0.137);
+    border-width: 0.01px;
+    border-color: antiquewhite;
+    margin: 9px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    padding: 6px;
+}
+.new-acc_bdInput{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    color: rgba(68, 62, 62, 0.933);
+}
+.createacc-DOB{
+    font-size:18px;
+    width: 8cm;
+    color: rgba(68, 62, 62, 0.705);
+    background-color: rgba(59, 66, 73, 0.137);
+}
+.new-acc_genderRadio{
+    margin: 6px;
+    padding: 4px ;
+    border-width: 3px;
+    border-color: #0f0f10;
+    border-radius: 6px;
+    background-color: rgba(59, 66, 73, 0.137);
+    width: 28%;
+    color: rgba(75, 79, 83, 0.881);
+    font-size: 16px;
+    float: left;
+
+}
+#gender{
+    float: right;
+}
+.new-acc_footer{
+    font-size: 11px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#new-acc_signupButton{
+    width: 40%;
+    /* padding: ; */
+    background-color: rgb(50, 137, 50);
+    border-color:#47475575;
+    border-radius: 6px;
+    font-size: 18px;
+    align-items: center;
+    margin-left: 30%;
+    font-weight: 700;
+    color: white;
+}
