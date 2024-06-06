@@ -14,12 +14,25 @@ loginrouter.set('views', path.resolve('./views'));
 loginrouter.get('/', (req, res) => {
     res.render('index');
 });
-loginrouter.post('/', (req, res) => {
+loginrouter.post('/', async(req, res) => {
+  console.log('Inside login post');
     console.log(req.body);
     const {email , password} = req.body;
-  
+    const checkuser = await UserDB.findOne({'email': email});
+    console.log(checkuser);
+    if(!checkuser){
+      res.send('Invalid credentials');
+    }
+    else if(checkuser.password === password){
+      
+      res.redirect('/home');
+    }
+    else{
+      res.send('Invalid credentials');
+    }
+    
     // res.render('index');
-    res.send('Data received');
+    
   });
 
 module.exports = loginrouter;

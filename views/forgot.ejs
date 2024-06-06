@@ -8,8 +8,10 @@
     <link rel="icon" type="#" href="../pic/facebookIcon.png">
     <link rel="stylesheet" href="../style/style.css">
     <!-- <script src="script1.js"></script> -->
+    <!-- <link rel="stylesheet" href="../style/style.css"> -->
 </head>
 <body>
+    
     <div id="forgot-block">
         <div class="forgot-block">
             <header>
@@ -21,13 +23,13 @@
             <p class="forgot-inputinfo">
                 Please enter your email or mobile number to search for your account.
             </p>
-            
+            <form action="/forgotpassword" method="post">
             <input type="email" id="forgot-e" class="forgot-email_input" placeholder="Email or mobile number">
             <hr class="forgot-hzrLine">
-            <input type="button" value="Search" class="forgot-button_search">
+            <input type="submit" value="Search" class="forgot-button_search">
         
-            <input type="button" value="Cancel" id="forgot-button_cancel" class="forgot-button_cancel">
-        
+            <input type="button" value="Cancel" id="forgot-button_cancel" class="forgot-button_cancel" href="/login">
+        </form>
         </div>
         </div>
 <script src="../script/script.js"></script>

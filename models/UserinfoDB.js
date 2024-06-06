@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     },
     fullName:{
         type: String,
-        required: true
+        required: true,
     },
     email:{
         type: String,
@@ -44,10 +44,10 @@ const userSchema = new mongoose.Schema({
 
 }, {timestamps: true} );
 
-userSchema.pre('save', function(next) {
-    this.fullName = `${this.firstName} ${this.lastName}`;
-    next();
-});
+// userSchema.pre('save', function(next) {
+//     this.fullName = `${this.firstName} ${this.lastName}`;
+//     next();
+// });
 
 const UserDB = mongoose.model('UserDB', userSchema);
 

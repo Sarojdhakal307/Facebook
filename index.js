@@ -18,6 +18,7 @@ app.use(express.static('public'));
 const loginrouter = require('./routes/login');
 const signuprouter = require('./routes/signup');
 const staticsrouter = require('./routes/staticsroutes');
+const forgotpwrouter = require('./routes/forgotpw');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
@@ -25,8 +26,13 @@ app.use(express.json());
 app.use('/', staticsrouter);
 app.use('/login', loginrouter);
 app.use('/signup', signuprouter);
+// app.use('/home', signuprouter);
+app.get('/home',(req,res)=>{
+    console.log('Home page');
+    res.render('home');
+});
 
-
+app.use('/forgotpassword', forgotpwrouter);
 
 
 

@@ -21,7 +21,7 @@
         Connect with frends and the world around you on facebook.
     </p>
 </div>
-<form action="/" method="post">
+<form action="/login" method="post">
 <div class="block">
     <div class="input">
         <input type="email" name="email" id="email-input" class="email-input" placeholder="Email or phone number" >
@@ -32,10 +32,10 @@
 </form>
     <!-- <a href="forgot_password.html" class="forgot-password"> -->
     <div class="forgotPassword">
-    <button id="forgot-password" herf>
-   
-        <p>Forgot password? </p>
-    </button></div>
+    <!-- <button id="forgot-password" href="/forget-password" class="#"> -->
+   <input type="button" id="forgot-password" value="forgot password?">
+
+    <!-- </button></div> -->
    
     <hr class="new-acc_hrzline">
     <div class="account-create" >
@@ -53,5 +53,10 @@
 
     
 <script src="../script/script.js"></script>
+<script>
+    document.getElementById("forgot-password").addEventListener("click", function() {
+        window.location.href = "/forgotpassword";
+    });
+</script>
 </body>
 </html>
