@@ -39,10 +39,12 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-
-
-
-}, {timestamps: true} );
+}, {timestamps: true} ,{
+createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'UserDB'
+}
+});
 
 // userSchema.pre('save', function(next) {
 //     this.fullName = `${this.firstName} ${this.lastName}`;

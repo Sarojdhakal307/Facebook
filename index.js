@@ -10,10 +10,15 @@ connectMongoDB("mongodb://127.0.0.1:27017/facebook").then(() => {
 console.log("MongoDB connected");    
 });
 
+const cookieParser = require('cookie-parser');
+const { resToLogUser  } = require('./middleware/auth');
+
 const render = require('ejs');
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
+
+app.use(cookieParser());
 
 const loginrouter = require('./routes/login');
 const signuprouter = require('./routes/signup');
@@ -27,7 +32,7 @@ app.use('/', staticsrouter);
 app.use('/login', loginrouter);
 app.use('/signup', signuprouter);
 // app.use('/home', signuprouter);
-app.get('/home',(req,res)=>{
+app.get('/home', resToLogUser ,(req,res)=>{
     console.log('Home page');
     res.render('home');
 });

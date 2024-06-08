@@ -2,8 +2,12 @@ const express = require('express');
 const loginrouter = express();
 const UserDB = require('../models/UserinfoDB');
 
+const { v4: uuidv4 } = require('uuid');
+const {setUser , getUser } = require('../service/auth');
+
 const render = require('ejs');
 const path = require('path');
+const { error } = require('console');
 
 loginrouter.use(express.json());
 loginrouter.use(express.urlencoded({ extended: false }));
@@ -21,14 +25,17 @@ loginrouter.post('/', async(req, res) => {
     const checkuser = await UserDB.findOne({'email': email});
     console.log(checkuser);
     if(!checkuser){
-      res.send('Invalid credentials');
-    }
+      res.redirect('/login', { err: "invalid User"});
+      }
     else if(checkuser.password === password){
-      
+      const sessionid = uuidv4();
+      setUser(sessionid , checkuser);
+      res.cookie('sessionid', sessionid);
       res.redirect('/home');
     }
     else{
-      res.send('Invalid credentials');
+      res.redirect('/login', { err: "invalid Password"}
+      );
     }
     
     // res.render('index');
