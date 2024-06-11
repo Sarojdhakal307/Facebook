@@ -13,7 +13,11 @@ function setUser(user){
 
 function getUser(token){
     if(!token) return null;
+try{
+    // console.log('token is  : ' + token);
     return jsonwebtoken.verify(token, secret);
+}
+catch(err){ console.error(err);}
 }
 
 

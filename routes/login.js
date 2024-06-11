@@ -36,8 +36,7 @@ loginrouter.post('/', async(req, res) => {
       res.redirect('/home');
     }
     else{
-      res.redirect('/login', { err: "invalid Password"}
-      );
+      res.redirect('/login');
     }
     
     // res.render('index');
