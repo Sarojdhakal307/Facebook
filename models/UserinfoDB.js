@@ -37,8 +37,12 @@ const userSchema = new mongoose.Schema({
     },
     createdAt:{
         type: Date,
-        default: Date.now,
+        default: Date.now
     },
+    // profilepic:{
+    //     type: image,
+        
+    // }
 }, {timestamps: true} ,{
 createdBy: {
     type: mongoose.Schema.Types.ObjectId,

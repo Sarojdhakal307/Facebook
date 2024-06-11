@@ -25,12 +25,14 @@ loginrouter.post('/', async(req, res) => {
     const checkuser = await UserDB.findOne({'email': email});
     console.log(checkuser);
     if(!checkuser){
-      res.redirect('/login', { err: "invalid User"});
+      res.redirect('/login');
       }
     else if(checkuser.password === password){
-      const sessionid = uuidv4();
-      setUser(sessionid , checkuser);
-      res.cookie('sessionid', sessionid);
+
+      const token = setUser(checkuser);
+      console.log(token);
+      res.cookie('uid', token);
+      console.log('cookie set');
       res.redirect('/home');
     }
     else{
